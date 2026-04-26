@@ -9,7 +9,7 @@ export default function Stream() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        axios.get('http://localhost:3000/movies')
+        axios.get('https://bms-backend-96qv.onrender.com/api/data')
             .then(response => {
                 setMovies(response.data);
                 setLoading(false);
