@@ -22,7 +22,7 @@ export default function EditForm() {
 
 
     const handleFetch = () => {
-        fetch("http://127.0.0.1:8000/api/data")
+        fetch("https://bms-backend-96qv.onrender.com/api/data")
             .then((res) => res.json())
             .then((res) => {
                 // Find the specific item matching the URL ID
@@ -65,7 +65,7 @@ export default function EditForm() {
             console.log(data.posterUrl);
             
 
-            await axios.patch(`http://127.0.0.1:8000/api/edit/${id}`, body);
+            await axios.patch(`https://bms-backend-96qv.onrender.com/api/edit/${id}`, body);
             console.log("Updation succesful");
             
             

@@ -36,7 +36,7 @@ export default function EditCard() {
     }, [id]);
 
     const handleFetch = () => {
-        fetch("http://127.0.0.1:8000/api/data")
+        fetch("https://bms-backend-96qv.onrender.com/api/data")
             .then((res) => res.json())
             .then((res) => {
                 // Find the specific item matching the URL ID
