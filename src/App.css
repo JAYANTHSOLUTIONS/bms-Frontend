@@ -1,0 +1,165 @@
+.col-lg-3 col-md-4 col-sm-6{
+    display: flex;
+}
+
+
+/* --- Global Reset & Fonts --- */
+body {
+    background-color: #ffffff;
+    font-family: 'Inter', -apple-system, sans-serif;
+    color: #212529;
+}
+
+/* --- Header --- */
+.btn-share-circle {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 1px solid #e0e0e0;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- Match Card (Reference 1 Style) --- */
+.match-card {
+    border: 1.5px solid #212529 !important; /* Visible Black Border */
+    border-radius: 1.25rem !important;
+    max-width: 450px;
+}
+
+.small-label {
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.team-container {
+    width: 120px;
+}
+
+.team-text {
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 0;
+}
+
+.vs-badge {
+    background-color: #ffffff;
+    color: #212529;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 3px 12px;
+    border-radius: 50px;
+    border: 1px solid #212529;
+}
+
+.text-booking {
+    color: #d32f2f !important;
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* --- Sidebar & Team Boxes --- */
+.sidebar-card {
+    border: 1px solid #e0e0e0 !important;
+    border-radius: 1.25rem !important;
+    padding: 1.5rem;
+}
+
+.team-logo-box {
+    aspect-ratio: 1/1;
+    border-radius: 1.1rem;
+    border: 1px solid #eeeeee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    transition: transform 0.2s;
+}
+
+.team-logo-box:hover {
+    transform: translateY(-3px);
+}
+
+/* Specific Light Backgrounds from Ref 1 */
+.bg-blue-light { background-color: #47494b !important; }
+.bg-purple-light { background-color: #ede9fe !important; }
+.bg-orange-light { background-color: #ffedd5 !important; }
+.bg-cyan-light { background-color: #ecfeff !important; }
+
+/* --- Sticky Positioning --- */
+@media (min-width: 992px) {
+    .sticky-top {
+        top: 2rem;
+        z-index: 1020;
+    }
+}
+
+.movie-hero {
+  min-height: 80vh;
+  position: relative;
+  /* Replace with the actual high-res background image */
+  background: linear-gradient(to right, rgba(0,0,0,0.9) 20%, rgba(0,0,0,0.4) 100%), 
+              url('background_image.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.poster-card {
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.poster-card:hover {
+  transform: scale(1.03);
+}
+
+.description-text {
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+/* Optional: Adding a slight blur to the background for focus */
+.movie-hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 0;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+}
+
+.bg-gradient-dark-bottom {
+  background: linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.4) 40%, transparent 100%);
+}
+
+/* Transform Bootstrap Bars into Dots */
+.custom-indicators [data-bs-target] {
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 50% !important; /* Makes them circular */
+    border: none !important;
+    margin: 0 5px !important;
+    background-color: #6c757d !important; /* Secondary color for inactive dots */
+    opacity: 0.5;
+    transition: opacity 0.3s ease, background-color 0.3s ease;
+}
+
+/* Active Dot Styling */
+.custom-indicators .active {
+    background-color: #ffffff !important; /* White for active dot */
+    opacity: 1 !important;
+}
+
+/* Move indicators slightly up if they overlap the bottom edge */
+.carousel-indicators {
+    bottom: 20px !important;
+}
