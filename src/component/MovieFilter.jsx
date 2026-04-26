@@ -19,7 +19,7 @@ const ProductFilter = () => {
 
   const handleFetch = async () => {
     try {
-      const res = await axios.get("http://localhost:3000/movies");
+      const res = await axios.get("https://bms-backend-96qv.onrender.com/api/data");
       setApi(res.data);
 
       // Dynamically set max price based on API data

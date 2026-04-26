@@ -14,7 +14,7 @@ export default function MoviesPage() {
     }, [])
 
     const handlefetch = async () => {
-        const res = await axios.get("http://localhost:3000/movies")
+        const res = await axios.get("https://bms-backend-96qv.onrender.com/api/data")
         console.log(res.data);
 
         setapi(res.data)
