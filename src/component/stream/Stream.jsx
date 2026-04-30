@@ -9,7 +9,7 @@ export default function Stream() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        axios.get('https://bms-backend-96qv.onrender.com/api/data')
+        axios.get('https://bmsbe-vercel.vercel.app/api/data')
             .then(response => {
                 setMovies(response.data);
                 setLoading(false);
@@ -49,7 +49,7 @@ export default function Stream() {
 
                     <div className="carousel-inner">
                         {movies.map((movie, index) => (
-                            <Link to={`/editall/${movie.id}`}>
+                            
                                 <div className={`carousel-item ${index === 0 ? 'active' : ''}`} key={movie.id || index} data-bs-interval="5000">
 
                                     <section
@@ -102,12 +102,19 @@ export default function Stream() {
                                                                 Trailer
                                                             </button>
                                                         </Link>
+
+
+                                                        <Link to={`/editall/${movie.id}`}>
+                                                            <button className="btn  btn-warning btn-lg px-4 rounded fw"> Edit
+                                                                <i className="bi bi-pencil"></i>
+                                                            </button>
+                                                        </Link>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </section>
-                                </div></Link>
+                                </div>
                         ))}
                     </div>
 

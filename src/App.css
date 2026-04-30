@@ -163,3 +163,19 @@ body {
 .carousel-indicators {
     bottom: 20px !important;
 }
+
+.hover-shadow {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-shadow:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15) !important;
+}
+
+.card-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}

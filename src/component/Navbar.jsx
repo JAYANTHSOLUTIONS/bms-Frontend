@@ -51,7 +51,7 @@ export default function Navbar() {
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item"><Link to="/explore/movies-chennai" className="nav-link  small" >Movies</Link></li>
                         <li className="nav-item"><Link to="/explore/stream" className="nav-link  small" >Stream</Link></li>
-                        <li className="nav-item"><a className="nav-link  small" href="#">Events</a></li>
+                        <li className="nav-item"><Link to="/explore/event" className="nav-link  small" >Events</Link></li>
                         <li className="nav-item"><a className="nav-link  small" href="#">Plays</a></li>
                         <li className="nav-item"><a className="nav-link  small" href="#">Sports</a></li>
                         <li className="nav-item"><a className="nav-link  small" href="#">Activities</a></li>

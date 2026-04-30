@@ -22,7 +22,7 @@ export default function EditForm() {
 
 
     const handleFetch = () => {
-        fetch("https://bms-backend-96qv.onrender.com/api/data")
+        fetch("https://bmsbe-vercel.vercel.app/api/data")
             .then((res) => res.json())
             .then((res) => {
                 // Find the specific item matching the URL ID
@@ -65,7 +65,7 @@ export default function EditForm() {
             console.log(data.posterUrl);
             
 
-            await axios.patch(`https://bms-backend-96qv.onrender.com/api/edit/${id}`, body);
+            await axios.patch(`https://bmsbe-vercel.vercel.app/api/edit/${id}`, body);
             console.log("Updation succesful");
             
             

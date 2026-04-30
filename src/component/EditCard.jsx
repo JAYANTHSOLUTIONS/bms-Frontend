@@ -36,7 +36,7 @@ export default function EditCard() {
     }, [id]);
 
     const handleFetch = () => {
-        fetch("https://bms-backend-96qv.onrender.com/api/data")
+        fetch("https://bmsbe-vercel.vercel.app/api/data")
             .then((res) => res.json())
             .then((res) => {
                 // Find the specific item matching the URL ID
@@ -98,7 +98,7 @@ export default function EditCard() {
                 bannerUrl: data.bannerUrl
             };
 
-            await axios.put(`http://127.0.0.1:8000/api/edit/${id}`, body);
+            await axios.put(`https://bmsbe-vercel.vercel.app/api/edit/${id}`, body);
 
             setsuccess("Update Successful!");
             console.log("successfully updated");

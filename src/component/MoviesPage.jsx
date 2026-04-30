@@ -5,7 +5,7 @@ import Card from './Card';
 import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import Slider from './Slider';
-import ProductFilter from './MovieFilter';
+import ProductFilter from './ProductFilter';
 
 export default function MoviesPage() {
   const [api, setapi] = useState([])
@@ -14,7 +14,7 @@ export default function MoviesPage() {
     }, [])
 
     const handlefetch = async () => {
-        const res = await axios.get("https://bms-backend-96qv.onrender.com/api/data")
+        const res = await axios.get("https://bmsbe-vercel.vercel.app/api/data")
         console.log(res.data);
 
         setapi(res.data)

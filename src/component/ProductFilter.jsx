@@ -19,7 +19,7 @@ const ProductFilter = () => {
 
   const handleFetch = async () => {
     try {
-      const res = await axios.get("https://bms-backend-96qv.onrender.com/api/data");
+      const res = await axios.get("https://bmsbe-vercel.vercel.app/api/data");
       setApi(res.data);
 
       // Dynamically set max price based on API data
