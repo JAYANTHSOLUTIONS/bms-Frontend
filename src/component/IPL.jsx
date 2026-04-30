@@ -22,14 +22,14 @@ export default function IPL() {
     const handleFetchData = async () => {
         try {
             setLoading(true);
-            const teamRes = await fetch('https://bmsbe-vercel.vercel.app/teams');
+            const teamRes = await fetch('https://bmsbe-vercel.vercel.app/api/teams');
             const teamData = await teamRes.json();
             const fetchedTeams = teamData.teams || teamData;
             
             setAllTeams(fetchedTeams); // Store all teams for match cards
             setSidebarTeams(fetchedTeams.slice(0, 4)); // Only 4 for the sidebar
 
-            const matchRes = await fetch('https://bmsbe-vercel.vercel.app/matches');
+            const matchRes = await fetch('https://bmsbe-vercel.vercel.app/api/matches');
             const matchData = await matchRes.json();
             setMatches(matchData.matches || matchData);
         } catch (err) {
